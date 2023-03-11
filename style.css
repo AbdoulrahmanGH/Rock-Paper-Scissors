@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.gradient {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(334deg, rgb(236, 234, 224), gold, rgb(147, 147, 0));
+	background-size: 180% 180%;
+	animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+body{
+    background: gold
+}
+
+.container{
+    background-color: white;
+        height: 32em;
+        width: 30em;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+        border-radius: 20px;
+        box-shadow: 0 1em 4em rgb(125, 124, 124);
+}
+
+.score{
+    margin: 0%;
+    padding: 24px;
+    text-align: right;
+    font-family: "Poppins";
+}
+
+.choiceButtons{
+
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.buttons{
+    background-color: gold;
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.buttons:hover{
+    background-color: rgb(255, 245, 190);
+}
+
+.results{
+    position: absolute;
+    bottom: 30%;
+    left: 14%;
+    text-align: center;
+    align-items: center;
+    letter-spacing: .3em .6em .4em;
+    font-size: 23px;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.winnerOrLoser{
+    width: 220px;
+    height: 55px;
+    background-color: aqua;
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    border-style: outset;
+    border-width: 5px;
+    border-color: black;
+    text-align: center;
+    padding: 5px;
+    font-family: "Poppins";
+    font-size: 22px;
+}
