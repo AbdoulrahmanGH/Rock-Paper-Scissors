@@ -1,100 +1,124 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 .gradient {
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(334deg, rgb(236, 234, 224), gold, rgb(147, 147, 0));
-	background-size: 180% 180%;
-	animation: gradient-animation 6s ease infinite;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  animation: gradient-animation 6s ease infinite;
 }
 
 @keyframes gradient-animation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-
-body{
-    background: gold
+body {
+  background: rgb(18, 18, 17);
 }
 
-.container{
-    background-color: white;
-        height: 32em;
-        width: 30em;
-        position: absolute;
-        transform: translate(-50%,-50%);
-        left: 50%;
-        top: 50%;
-        border-radius: 20px;
-        box-shadow: 0 1em 4em rgb(125, 124, 124);
+.container {
+  background-color: white;
+  height: 32em;
+  width: 30em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 20px;
+  box-shadow: 0 1em 4em rgb(125, 124, 124);
 }
 
-.score{
-    margin: 0%;
-    padding: 24px;
-    text-align: right;
-    font-family: "Poppins";
+.score {
+  margin: 0%;
+  padding: 24px;
+  text-align: right;
+  font-family: "Poppins";
 }
 
-.choiceButtons{
-
-    height: 30%;
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-}
-.buttons{
-    background-color: gold;
-    border: none;
-    padding: 10px;
-    border-radius: 100px;
+.choiceButtons {
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.buttons:hover{
-    background-color: rgb(255, 245, 190);
+.buttons {
+  background-color: rgb(0, 242, 255);
+  border: none;
+  padding: 10px;
+  border-radius: 100px;
 }
 
-.results{
-    position: absolute;
-    bottom: 30%;
-    left: 14%;
-    text-align: center;
-    align-items: center;
-    letter-spacing: .3em .6em .4em;
-    font-size: 23px;
-    font-family: "Poppins";
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.buttons:hover {
+  background-color: gold;
 }
 
-.winnerOrLoser{
-    width: 220px;
-    height: 55px;
-    background-color: aqua;
-    position: absolute;
-    left: 25%;
-    top: 80%;
-    border-style: outset;
-    border-width: 5px;
-    border-color: black;
-    text-align: center;
-    padding: 5px;
-    font-family: "Poppins";
-    font-size: 22px;
+.results {
+  position: absolute;
+  bottom: 30%;
+  left: 14%;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.3em 0.6em 0.4em;
+  font-size: 23px;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.winnerOrLoser {
+  width: 220px;
+  height: 55px;
+  background-color: aqua;
+  position: absolute;
+  left: 25%;
+  top: 80%;
+  border-style: outset;
+  border-width: 5px;
+  border-color: black;
+  text-align: center;
+  padding: 5px;
+  font-family: "Poppins";
+  font-size: 22px;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  
+  .results {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  
+  .choiceButtons {
+    top: 30%;
+  }
+  
+  .results {
+    font-size: 16px;
+  }
 }
